@@ -490,7 +490,6 @@ class Test_Document(unittest.TestCase):
         lg = Login(self.driver)
         lg.open(self.Url)
         lg.login_portal(self.username, self.password, "电器")
-        main_window = lg.current_window()
         cr = Create_Form(self.driver)
         cr.create_from('自动化非自定义单据')
         submit = Submit_from(self.driver)
