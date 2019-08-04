@@ -1,0 +1,15 @@
+2018-12-03 13:28:49,363 - Fox - ERROR - error 日志
+2018-12-03 13:28:49,363 - Fox - CRITICAL - cri message
+2018-12-03 13:30:32,639 - Fox - ERROR - error 日志
+2018-12-03 13:30:32,639 - Fox - CRITICAL - cri message
+2018-12-03 13:30:56,962 - Fox - ERROR - error 日志
+2018-12-03 13:30:56,962 - Fox - CRITICAL - cri 日志
+2018-12-03 13:33:06,200 - Fox - ERROR - error 输出
+2018-12-03 13:45:48,718 - Box - ERROR - This is a successful info msg!
+2018-12-03 15:13:38,195 - Box - ERROR - This is a successful info msg!
+2018-12-03 15:13:38,195 - Box - ERROR - This is a successful info msg!
+2018-12-03 16:04:19,664 - Box - ERROR - This is a successful info msg!
+2018-12-03 16:04:19,664 - Box - ERROR - This is a successful info msg!
+2018-12-03 16:39:38,370 - Fox - ERROR - 从这里开始日志
+2018-12-03 17:23:32,532 - Box - ERROR - This is a successful info msg!
+2018-12-03 17:23:32,532 - Box - ERROR - This is a successful info msg!

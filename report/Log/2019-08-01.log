@@ -1,0 +1,6 @@
+2019-08-01 20:42:54,022 - 提交单据 - ERROR - 验证单据时发生异常：'NoneType' object has no attribute 'text'
+2019-08-01 20:54:59,574 - 提交单据 - ERROR - 验证单据时发生异常：'NoneType' object has no attribute 'find_elements_by_tag_name'
+2019-08-01 20:58:12,774 - 提交单据 - ERROR - 验证单据时发生异常：'NoneType' object has no attribute 'text'
+2019-08-01 21:12:09,677 - 提交单据 - ERROR - 验证单据时发生异常：None != '白金鑫' : 开始环节添加环节->直至送签结束
+2019-08-01 21:13:28,515 - 提交单据 - ERROR - 验证单据时发生异常：None != '白金鑫' : 开始环节添加环节->直至送签结束
+2019-08-01 21:22:53,785 - 提交单据 - ERROR - 验证单据时发生异常：'Submit_from' object has no attribute 'SM_Confirm_Button'
