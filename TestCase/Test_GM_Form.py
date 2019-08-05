@@ -28,7 +28,7 @@ class Test_Document(unittest.TestCase):
         sleep(3)
         self.driver.quit()
 
-    @unittest.skip("用例1调试完成暂不执行")
+    # @unittest.skip("用例1调试完成暂不执行")
     def test_SendToSign01(self):
         '''
         抢占:开始 A-->B(送签)C-->C(结束)
@@ -74,7 +74,7 @@ class Test_Document(unittest.TestCase):
             Have.logger.info("抢占模式用例执行通过>>>>>>>>>>>>>>>>>")
             insert_img(self.driver, "test_SendToSign1成功用例截图.png")
 
-    @unittest.skip("用例2已完成")
+    # @unittest.skip("用例2已完成")
     def test_SendToSign02(self):
         '''
         开始A->会签B、C(送签)D->D(结束)
@@ -126,7 +126,7 @@ class Test_Document(unittest.TestCase):
             Have.logger.info("多人会签模式用例执行通过>>>>>>>>>>>>>>>>>")
             insert_img(self.driver, "test_SendToSign02成功用例截图.png")
 
-    @unittest.skip("略略略")
+    # @unittest.skip("略略略")
     def test_SendToSign03(self):
         '''
             A(开始)->B(转签)C->C(送签)D(结束)
@@ -178,7 +178,7 @@ class Test_Document(unittest.TestCase):
             Have.logger.info("转签成功后送签用例执行通过>>>>>>>>>>>>>>>>>")
             insert_img(self.driver, "test_SendToSign03成功用例截图.png")
 
-    @unittest.skip("用例4")
+    # @unittest.skip("用例4")
     def test_SendToSign04(self):
         '''
         A(开始)送签->B（环节2）逐级退回到A->
@@ -231,7 +231,7 @@ class Test_Document(unittest.TestCase):
             Have.logger.info("退回到开始环节送签用例执行通过>>>>>>>>>>>>>>>>>")
             insert_img(self.driver, "test_SendToSign04成功用例截图.png")
 
-    @unittest.skip("用例5")
+    # @unittest.skip("用例5")
     def test_SendToSign05(self):
         '''
         A(开始)送签->B（环节2）直接退回到A->
@@ -285,7 +285,7 @@ class Test_Document(unittest.TestCase):
             Have.logger.info("直退开始环节送签用例执行通过>>>>>>>>>>>>>>>>>")
             insert_img(self.driver, "test_SendToSign05成功用例截图.png")
 
-    @unittest.skip("用例6")
+    # @unittest.skip("用例6")
     def test_SendToSign06(self):
         '''
         A(开始)送签->B（抢占）修改下级审批人为C ->C(送签)结束
@@ -335,7 +335,7 @@ class Test_Document(unittest.TestCase):
             Have.logger.info("退回到开始环节送签用例执行通过>>>>>>>>>>>>>>>>>")
             insert_img(self.driver, "test_SendToSign06成功用例截图.png")
 
-    @unittest.skip("用例7")
+    # @unittest.skip("用例7")
     def test_SendToSign07(self):
         '''
         A(开始)送签->B(会签)直退给A
@@ -375,7 +375,7 @@ class Test_Document(unittest.TestCase):
             Send.logger.info("退回到开始环节送签用例执行通过>>>>>>>>>>>>>>>>>")
             insert_img(self.driver, "test_SendToSign07成功用例截图.png")
 
-    @unittest.skip("用例8")
+    # @unittest.skip("用例8")
     def test_SendToSign08(self):
         """
         A(开始)送签->B送签C->B撤回单据重新送签->C,C送签（结束）
@@ -426,7 +426,7 @@ class Test_Document(unittest.TestCase):
             Have.logger.info("撤回后继续送签用例执行通过>>>>>>>>>>>>>>>>>")
             insert_img(self.driver, "test_SendToSign08成功用例截图.png")
 
-    @unittest.skip("用例9")
+    # @unittest.skip("用例9")
     def test_SendToSign09(self):
         """
         A(开始)送签->B（加签）C->C（送签）D->D送签（结束）

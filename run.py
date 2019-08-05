@@ -29,15 +29,15 @@ if __name__ == '__main__':
 
 ## ========   下面代码为运行所有测试用例并将最新报告已邮件形式发送  ======= ##
 
-    # now = time.strftime("%Y-%m-%d_%H_%M_%S")
-    # filename = report_path + '\\' + now + 'result.html'
-    # fp = open(filename,'wb')
-    # runner = HTMLTestRunner(stream=fp,
-    #                         title='OA单据自动化测试报告',
-    #                         description='用例执行情况: ')
-    runner = unittest.TextTestRunner(verbosity=2)
+    now = time.strftime("%Y-%m-%d_%H_%M_%S")
+    filename = report_path + '\\' + now + 'result.html'
+    fp = open(filename,'wb')
+    runner = HTMLTestRunner(stream=fp,
+                            title='OA单据自动化测试报告',
+                            description='用例执行情况: ')
+    # runner = unittest.TextTestRunner(verbosity=2)
     runner.run(get_allcase())
-    # fp.close()
-    #
-    # new_report = latest_report(report_path)  # 获取最新测试报告
-    # send_mail(new_report)                    # 发送测试报告
+    fp.close()
+
+    new_report = latest_report(report_path)  # 获取最新测试报告
+    send_mail(new_report)                    # 发送测试报告
