@@ -2,6 +2,7 @@ from public.pages.BasePage import *
 from public.Common import Doexcel
 from public.pages.GM_Portal_Login import Login
 from public.pages.GM_Portal_Submit_Form import *
+
 class Create_Form(BasePage):
     """
     创建单据页面的模板
@@ -10,13 +11,6 @@ class Create_Form(BasePage):
     """
     logger = Logger("打开单据", CmdLevel=logging.DEBUG, FileLevel=logging.ERROR)
 
-    # 定位器
-    More_loc = ("xpath","//div[contains(text(),'更多')]")       # 先找到更多按钮
-    My_Task_loc = ("xpath","//ul[@class='more-ul']/li[5]")                      # 我的任务
-    New_create_from_loc = ("xpath","//ul[@class='el-menu']/div/div[9]/li/div")  # 新单据申请
-    create_Wisdom_office_loc = ("xpath","//span[contains(text(),'智慧办公')]")   # 智慧办公
-    get_from_loc = ("xpath","//em[contains(text(),'自动化非自定义单据')]")        # 打开单据
-    get_from1_loc = ("xpath","//em[contains(text(),'自动化会签模式多人审批流程')]")# 打开单据
     def create_from(self,formname):
         '''
         封装了从智慧办公页面的创建单据的业务逻辑
