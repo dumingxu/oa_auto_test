@@ -5,6 +5,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.select import Select
+from log.log import Logger
 from selenium.webdriver.common.by import By
 import logging
 import time
@@ -37,11 +38,11 @@ class BasePage():
             WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
             return self.driver.find_element(*loc)
         except:
-            print(u"%s 页面中未能找到 %s 元素" % (self,loc))
+            logging.exception("%s:页面中未能找到%s" % (self,loc))
         # return self.driver.find_element(*loc)
 
     #寻找指定的一批元素
-    def find_elements(self,loc):
+    def find_elements(self,*loc):
         try:
             # 确保元素是可见的。
             # 注意：以下入参为元组的元素，需要加*。Python存在这种特性，就是将入参放在元组里。
@@ -52,8 +53,8 @@ class BasePage():
             # return elements
             elements = self.driver.find_elements_by_xpath(loc)
             return elements
-        except Exception as e:
-            print(u"%s 页面中未能找到 %s 元素:%s" % (self, loc,e))
+        except:
+            logging.exception("%s:页面中未能找到%s" % (self,loc))
 
         # 重写定义send_keys方法
     def send_keys(self, loc, vaule, clear_first=True, click_first=True):
@@ -65,15 +66,13 @@ class BasePage():
                 self.find_element(*loc).clear()
                 self.find_element(*loc).send_keys(vaule)
         except AttributeError:
-            print(u"%s 页面中未能找到 %s 元素" % (self, loc))
+            logging.exception("%s:页面中未能找到%s" % (self,loc))
 
     # 判断复选框能否被选中
     def check_box(self,*loc):
-
         return self.find_element(*loc).is_selected()
 
     def checks_boxs(self,loc):
-
         return self.find_elements(*loc).is_selected()
 
     # def click(self):
@@ -91,7 +90,6 @@ class BasePage():
 
     #元素不可见时用此方法改为可见
     def display(self,id):
-        self.driver = webdriver.Chrome()
         js = "document.getElementById(list[id]).style.display='block'"
         self.driver.execute_script(js)
 

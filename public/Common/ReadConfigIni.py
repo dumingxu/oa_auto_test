@@ -22,9 +22,9 @@ class ReadConfigIni():
 # *************
 # file_path = os.path.dirname(__file__)
 # file_path = os.path.split(os.path.realpath(__file__))[0]
-
+#
 # file_path = os.path.abspath("./")
-
+#
 # print(file_path)
 # read_config = ReadConfigIni(os.path.join(file_path,'config.ini'))
 # print(read_config)
