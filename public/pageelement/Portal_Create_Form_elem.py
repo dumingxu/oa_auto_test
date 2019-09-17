@@ -2,7 +2,9 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2019/9/17 14:51
 # @Author  : dumingxu
-# @File    : Portal_Create_Form.element.py
+# @File    : Portal_Create_Form_elem.py
+
+from selenium.webdriver.common.by import By
 
 class Porttal_Create_Form_Elem:
     '''

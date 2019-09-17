@@ -2,6 +2,7 @@ from public.pages.BasePage import *
 from public.Common import Doexcel
 from public.pages.GM_Portal_Login import Login
 from public.pages.GM_Portal_Submit_Form import *
+from public.pageelement.Portal_Create_Form_elem import Porttal_Create_Form_Elem  # 存放页面元素的类
 
 class Create_Form(BasePage):
     """
@@ -17,20 +18,20 @@ class Create_Form(BasePage):
         :return:
         '''
         self.logger.info("点击更多按钮")
-        self.move_to(self.find_element(*self.More_loc))  # 点击更多按钮
+        self.move_to(self.find_element(*Porttal_Create_Form_Elem.More_loc))  # 点击更多按钮
         self.logger.info("点击我的任务")
-        self.find_element(*self.My_Task_loc).click()  # 点击我的任务
+        self.find_element(*Porttal_Create_Form_Elem.My_Task_loc).click()  # 点击我的任务
         self.logger.info("点击新单据申请")
-        self.find_element(*self.New_create_from_loc).click() # 点击新单据申请
+        self.find_element(*Porttal_Create_Form_Elem.New_create_from_loc).click() # 点击新单据申请
         self.logger.info("点击智慧办公")
-        self.find_element(*self.create_Wisdom_office_loc).click() # 点击新智慧办公
+        self.find_element(*Porttal_Create_Form_Elem.create_Wisdom_office_loc).click() # 点击新智慧办公
         self.wait(2)
         # C = self.current_window()
         # print(C)
         if formname == '自动化非自定义单据':
-            self.find_element(*self.get_from_loc).click() # 打开自动化测试单据
+            self.find_element(*Porttal_Create_Form_Elem.get_from_loc).click() # 打开自动化测试单据
         elif formname == '自动化会签模式多人审批流程':
-            self.find_element(*self.get_from1_loc).click()  # 打开自动化测试单据
+            self.find_element(*Porttal_Create_Form_Elem.get_from1_loc).click()  # 打开自动化测试单据
         else:
             self.logger.error("输入的单据名称为：%s ,没有在页面中找到" % formname)
 

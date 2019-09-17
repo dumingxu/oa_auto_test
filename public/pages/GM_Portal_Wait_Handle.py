@@ -29,7 +29,7 @@ class Wait_Handle(BasePage):
         :param oderno:需要传入单据编号  单据编号由 submit_from 方法获取
         :return:返回查询结果中的单据状态用于验证单据是否审批成功
         '''
-        state_list = ['审批中','审批完成','未提交','退回']
+        # state_list = ['审批中','审批完成','未提交','退回']
         self.logger.info("输入单据编号：%s" % oderno)
         K = self.find_element(*Portal_Wait_Handle_Ele.select_oderno_loc)
         K.send_keys(oderno)
